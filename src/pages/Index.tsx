@@ -68,11 +68,10 @@ export default function Index() {
         <div className="container mx-auto text-center max-w-4xl">
           <div className="animate-fade-in">
             <h2 className="text-6xl md:text-7xl font-bold text-[#3E2723] mb-6 leading-tight">
-              Сокровищница<br />старинных книг
+              Сокровищница<br />старых книг
             </h2>
             <p className="text-xl text-[#8B4513] mb-8 max-w-2xl mx-auto leading-relaxed">
-              Откройте для себя мир антикварных изданий. Каждая книга — частица истории, 
-              бережно сохранённая для истинных ценителей литературы.
+              Откройте для себя мир букинистики.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-[#8B4513] hover:bg-[#3E2723] text-[#FFF8DC] px-8 py-6 text-lg">
