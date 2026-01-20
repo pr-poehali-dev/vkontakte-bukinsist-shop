@@ -1,36 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=Merriweather:wght@300;400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 42 25% 96%;
+    --foreground: 20 20% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 35 30% 94%;
+    --card-foreground: 20 20% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 35 30% 94%;
+    --popover-foreground: 20 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 50% 35%;
+    --primary-foreground: 35 30% 94%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 25% 75%;
+    --secondary-foreground: 20 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 85%;
+    --muted-foreground: 20 15% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 30 40% 65%;
+    --accent-foreground: 20 20% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 80%;
+    --input: 35 20% 80%;
+    --ring: 25 50% 35%;
 
     --radius: 0.5rem;
 
@@ -97,5 +99,38 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Merriweather", serif;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant", serif;
+  }
+}
+
+.vintage-texture {
+  background-image:
+    linear-gradient(rgba(139, 69, 19, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 69, 19, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.book-shadow {
+  box-shadow:
+    2px 2px 4px rgba(62, 39, 35, 0.1),
+    4px 4px 8px rgba(62, 39, 35, 0.08),
+    inset 0 0 20px rgba(245, 230, 211, 0.3);
+}
+
+.page-flip {
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.page-flip:hover {
+  transform: rotateY(-5deg);
 }
