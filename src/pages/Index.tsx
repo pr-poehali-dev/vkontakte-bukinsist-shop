@@ -77,7 +77,11 @@ export default function Index() {
               Откройте для себя мир букинистики. Каждая книга бережно сохранена для Вас.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-[#8B4513] hover:bg-[#3E2723] text-[#FFF8DC] px-8 py-6 text-lg">
+              <Button 
+                size="lg" 
+                className="bg-[#8B4513] hover:bg-[#3E2723] text-[#FFF8DC] px-8 py-6 text-lg"
+                onClick={() => window.open('https://vk.com/market-54037046?screen=group', '_blank')}
+              >
                 <Icon name="Search" className="mr-2" />
                 Каталог книг
               </Button>
