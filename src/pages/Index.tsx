@@ -133,68 +133,28 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Collections Section */}
+      {/* Catalog Banner */}
       <section id="collections" className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-5xl font-bold text-[#3E2723] text-center mb-4">Наши коллекции</h2>
-          <p className="text-center text-[#8B4513] mb-12 text-lg">
-            Найдите редкую книгу по эпохе и жанру
-          </p>
-
-          {/* Search */}
-          <div className="max-w-xl mx-auto mb-8">
-            <div className="relative">
-              <Icon name="Search" className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B4513]" />
-              <Input 
-                placeholder="Поиск по названию, автору..." 
-                className="pl-10 py-6 text-lg border-2 border-[#8B4513]/30 focus:border-[#8B4513]"
-              />
-            </div>
-          </div>
-
-          {/* Era Filter */}
-          <Tabs defaultValue="all" className="mb-8" onValueChange={setSelectedEra}>
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 bg-[#F5E6D3] p-1">
-              <TabsTrigger value="all" className="data-[state=active]:bg-[#8B4513] data-[state=active]:text-[#FFF8DC]">Все</TabsTrigger>
-              <TabsTrigger value="19th" className="data-[state=active]:bg-[#8B4513] data-[state=active]:text-[#FFF8DC]">XIX век</TabsTrigger>
-              <TabsTrigger value="soviet" className="data-[state=active]:bg-[#8B4513] data-[state=active]:text-[#FFF8DC]">Советская</TabsTrigger>
-              <TabsTrigger value="rare" className="data-[state=active]:bg-[#8B4513] data-[state=active]:text-[#FFF8DC]">Редкости</TabsTrigger>
-            </TabsList>
-          </Tabs>
-
-          {/* Books Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredBooks.map((book) => (
-              <Card key={book.id} className="book-shadow bg-[#FFF8DC] border-2 border-[#8B4513]/20 page-flip hover:shadow-xl transition-all">
-                <CardHeader>
-                  <div className="text-6xl mb-4 text-center">{book.image}</div>
-                  <CardTitle className="text-2xl text-[#3E2723]">{book.title}</CardTitle>
-                  <CardDescription className="text-[#8B4513] text-base">{book.author}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-[#3E2723]/60">Год издания:</span>
-                      <Badge variant="outline" className="border-[#8B4513] text-[#8B4513]">{book.year}</Badge>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-[#3E2723]/60">Состояние:</span>
-                      <span className="font-medium text-[#3E2723]">{book.condition}</span>
-                    </div>
-                    <div className="pt-4 border-t border-[#8B4513]/20">
-                      <div className="flex justify-between items-center mb-3">
-                        <span className="text-2xl font-bold text-[#8B4513]">{book.price}</span>
-                      </div>
-                      <Button className="w-full bg-[#8B4513] hover:bg-[#3E2723] text-[#FFF8DC]">
-                        <Icon name="ShoppingCart" className="mr-2" size={18} />
-                        Заказать
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <div className="container mx-auto max-w-4xl">
+          <Card className="book-shadow bg-gradient-to-br from-[#8B4513] to-[#3E2723] border-2 border-[#8B4513] text-center">
+            <CardContent className="py-12 px-6">
+              <div className="text-6xl mb-6">📚</div>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#FFF8DC] mb-6">
+                Удобный каталог книг
+              </h2>
+              <p className="text-xl text-[#F5E6D3] mb-8 max-w-2xl mx-auto leading-relaxed">
+                В нашей группе ВК все книги разложены по категориям, что значительно облегчает поиск
+              </p>
+              <Button 
+                size="lg"
+                className="bg-[#FFF8DC] hover:bg-[#F5E6D3] text-[#3E2723] px-10 py-7 text-xl font-semibold"
+                onClick={() => window.open('https://vk.com/market-54037046?screen=group', '_blank')}
+              >
+                <Icon name="BookOpen" className="mr-2" size={24} />
+                Перейти к каталогу
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
