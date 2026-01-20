@@ -71,7 +71,7 @@ export default function Index() {
               Сокровищница<br />старых книг
             </h2>
             <p className="text-xl text-[#8B4513] mb-8 max-w-2xl mx-auto leading-relaxed">
-              Откройте для себя мир букинистики.
+              Откройте для себя мир букинистики. Каждая книга бережно сохранена для Вас.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-[#8B4513] hover:bg-[#3E2723] text-[#FFF8DC] px-8 py-6 text-lg">
