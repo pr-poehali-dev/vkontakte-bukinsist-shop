@@ -123,7 +123,11 @@ export default function Index() {
               </div>
             </div>
             <div className="relative">
-              <div className="text-[200px] leading-none opacity-10 select-none">📚</div>
+              <img 
+                src="https://cdn.poehali.dev/projects/9591306f-2d61-44ff-82e3-59bd8a6369a0/files/8c93c4de-7df2-4ed5-b3ae-f8ead343900c.jpg" 
+                alt="Стопки старых книг"
+                className="rounded-lg book-shadow w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
