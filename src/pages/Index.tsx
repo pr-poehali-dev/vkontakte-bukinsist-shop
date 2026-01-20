@@ -273,14 +273,14 @@ export default function Index() {
             <span className="text-2xl font-bold">Магазин Старой Книги</span>
           </div>
           <p className="text-[#F5E6D3]/70 mb-4">
-            Букинистический магазин редких и антикварных книг
+            Букинистический магазин с очень дешевыми книгами
           </p>
           <div className="flex justify-center gap-6 text-sm text-[#F5E6D3]/60">
             <span>© 2024 Все права защищены</span>
             <span>•</span>
-            <span>ИП Иванов А.С.</span>
+            <span>ИП Резанов А.Н.</span>
             <span>•</span>
-            <span>ОГРНИП 123456789012345</span>
+            <span>ОГРНИП 322352500039302</span>
           </div>
         </div>
       </footer>
