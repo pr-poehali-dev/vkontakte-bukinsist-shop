@@ -49,7 +49,7 @@ export default function Index() {
             <div className="flex items-center gap-3">
               <span className="text-5xl">📚</span>
               <div>
-                <h1 className="text-3xl font-bold text-[#3E2723]">Старая Библиотека</h1>
+                <h1 className="text-3xl font-bold text-[#3E2723]">Магазин Старой Книги</h1>
                 <p className="text-sm text-[#8B4513]">Букинистический магазин</p>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function Index() {
               <h2 className="text-5xl font-bold text-[#3E2723]">О магазине</h2>
               <div className="space-y-4 text-[#3E2723]/80 text-lg leading-relaxed">
                 <p>
-                  «Старая Библиотека» — это семейный букинистический магазин с более чем 30-летней историей. 
+                  «Магазин Старой Книги» — это семейный букинистический магазин с более чем 30-летней историей. 
                   Мы специализируемся на редких изданиях русской классики, советской литературы и антикварных книгах.
                 </p>
                 <p>
@@ -298,7 +298,7 @@ export default function Index() {
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-3xl">📚</span>
-            <span className="text-2xl font-bold">Старая Библиотека</span>
+            <span className="text-2xl font-bold">Магазин Старой Книги</span>
           </div>
           <p className="text-[#F5E6D3]/70 mb-4">
             Букинистический магазин редких и антикварных книг
