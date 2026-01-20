@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,8 +6,20 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 
+declare global {
+  interface Window {
+    VK: any;
+  }
+}
+
 export default function Index() {
   const [selectedEra, setSelectedEra] = useState('all');
+
+  useEffect(() => {
+    if (window.VK) {
+      window.VK.Widgets.Group("vk_widget", {mode: 4, width: "auto", height: "400", color1: 'FFF8DC', color2: '3E2723', color3: '8B4513'}, 85650756);
+    }
+  }, []);
 
   const collections = [
     { id: 1, title: 'Война и мир', author: 'Л.Н. Толстой', year: '1869', era: '19th', price: '12 500 ₽', condition: 'Отличное', image: '📚' },
@@ -67,7 +79,12 @@ export default function Index() {
                 <Icon name="Search" className="mr-2" />
                 Каталог книг
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-[#8B4513] text-[#8B4513] hover:bg-[#8B4513] hover:text-[#FFF8DC] px-8 py-6 text-lg">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-[#8B4513] text-[#8B4513] hover:bg-[#8B4513] hover:text-[#FFF8DC] px-8 py-6 text-lg"
+                onClick={() => window.open('https://vk.com/old_frend_book', '_blank')}
+              >
                 <Icon name="MessageCircle" className="mr-2" />
                 Группа ВКонтакте
               </Button>
@@ -253,7 +270,10 @@ export default function Index() {
                 </div>
 
                 <div className="pt-4">
-                  <Button className="w-full bg-[#0077FF] hover:bg-[#0066DD] text-white text-lg py-6">
+                  <Button 
+                    className="w-full bg-[#0077FF] hover:bg-[#0066DD] text-white text-lg py-6"
+                    onClick={() => window.open('https://vk.com/old_frend_book', '_blank')}
+                  >
                     <Icon name="MessageCircle" className="mr-2" size={24} />
                     Наша группа ВКонтакте
                   </Button>
@@ -261,13 +281,14 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <div className="bg-[#F5E6D3] rounded-lg border-2 border-[#8B4513]/20 p-8 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-8xl mb-4">🗺️</div>
-                <p className="text-[#8B4513] text-lg">Карта проезда</p>
-                <p className="text-[#3E2723]/60 text-sm mt-2">м. Арбатская, 3 минуты пешком</p>
-              </div>
-            </div>
+            <Card className="book-shadow bg-[#FFF8DC] border-2 border-[#8B4513]/20 overflow-hidden">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#3E2723]">Наши новости в VK</CardTitle>
+              </CardHeader>
+              <CardContent className="p-4">
+                <div id="vk_widget" className="min-h-[400px]"></div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
