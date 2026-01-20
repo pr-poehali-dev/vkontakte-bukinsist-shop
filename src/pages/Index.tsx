@@ -217,7 +217,7 @@ export default function Index() {
                   <Icon name="MapPin" className="text-[#8B4513] mt-1" size={24} />
                   <div>
                     <div className="font-medium text-[#3E2723] mb-1">Адрес магазина</div>
-                    <div className="text-[#3E2723]/70">г. Москва, ул. Арбат, д. 25</div>
+                    <div className="text-[#3E2723]/70">г. Вологда, ул. Марии Ульяновой, 5</div>
                   </div>
                 </div>
                 
@@ -225,7 +225,7 @@ export default function Index() {
                   <Icon name="Clock" className="text-[#8B4513] mt-1" size={24} />
                   <div>
                     <div className="font-medium text-[#3E2723] mb-1">Режим работы</div>
-                    <div className="text-[#3E2723]/70">Пн-Сб: 10:00 — 20:00<br/>Вс: 11:00 — 18:00</div>
+                    <div className="text-[#3E2723]/70">Ежедневно с 10:00 до 19:00</div>
                   </div>
                 </div>
                 
@@ -233,18 +233,10 @@ export default function Index() {
                   <Icon name="Phone" className="text-[#8B4513] mt-1" size={24} />
                   <div>
                     <div className="font-medium text-[#3E2723] mb-1">Телефон</div>
-                    <div className="text-[#3E2723]/70">+7 (495) 123-45-67</div>
+                    <div className="text-[#3E2723]/70">+7 (900) 557-33-50</div>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
-                  <Icon name="Mail" className="text-[#8B4513] mt-1" size={24} />
-                  <div>
-                    <div className="font-medium text-[#3E2723] mb-1">Email</div>
-                    <div className="text-[#3E2723]/70">info@staraya-biblioteka.ru</div>
-                  </div>
-                </div>
-
                 <div className="pt-4">
                   <Button 
                     className="w-full bg-[#0077FF] hover:bg-[#0066DD] text-white text-lg py-6"
